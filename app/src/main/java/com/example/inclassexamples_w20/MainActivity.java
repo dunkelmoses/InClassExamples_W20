@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 XmlPullParser xpp = factory.newPullParser();
                 xpp.setInput( response  , "UTF-8");
 
+
+                //From part 3, slide 20
                 String parameter = null;
 
                 int eventType = xpp.getEventType(); //The parser is currently at BEGIN_DOCUMENT
