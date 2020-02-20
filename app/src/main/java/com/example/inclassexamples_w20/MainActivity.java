@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MyHTTPRequest req = new MyHTTPRequest();
-        req.execute("http://torunski.ca/CST2335.xml");  //Type 1
+        req.execute("http://torunski.ca/CST2335_XML.xml");  //Type 1
     }
                                                 //Type1     Type2   Type3
     private class MyHTTPRequest extends AsyncTask< String, Integer, String>
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 //From part 3, slide 20
                 String parameter = null;
 
-                int eventType = xpp.getEventType(); //The parser is currently at BEGIN_DOCUMENT
+                int eventType = xpp.getEventType(); //The parser is currently at START_DOCUMENT
 
                 while(eventType != XmlPullParser.END_DOCUMENT)
                 {
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         {
                             //If you get here, then you are pointing to a <Weather> start tag
                             String outlook = xpp.getAttributeValue(null,    "outlook");
+                            String windy = xpp.getAttributeValue(null, "windy");
                         }
 
                         else if(xpp.getName().equals("AMessage"))
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             }
             catch (Exception e)
             {
-
+Log.e("Error", e.getMessage());
             }
 
             return "Done";
