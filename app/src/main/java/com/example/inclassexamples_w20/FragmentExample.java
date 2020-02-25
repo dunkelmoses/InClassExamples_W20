@@ -45,7 +45,7 @@ public class FragmentExample extends AppCompatActivity {
                 dFragment.setArguments( dataToPass ); //pass it a bundle for information
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .add(R.id.fragmentLocation, dFragment) //Add the fragment in FrameLayout
+                        .replace(R.id.fragmentLocation, dFragment) //Add the fragment in FrameLayout
                         .commit(); //actually load the fragment.
             }
             else //isPhone

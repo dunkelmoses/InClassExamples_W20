@@ -5,6 +5,6 @@
     android:layout_height="match_parent"
     android:id="@+id/fragmentLocation">
 
-<!-- This layout is simply copied from fragment_example.xml in layout-sw720dp -->
+<!-- This FrameLayout is simply copied from fragment_example.xml in layout-sw720dp -->
 
 </FrameLayout>

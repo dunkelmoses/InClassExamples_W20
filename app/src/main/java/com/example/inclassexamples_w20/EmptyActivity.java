@@ -17,7 +17,7 @@ public class EmptyActivity extends AppCompatActivity {
         dFragment.setArguments( dataToPass ); //pass data to the the fragment
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.fragmentLocation, dFragment)
+                .replace(R.id.fragmentLocation, dFragment)
                 .commit();
     }
 }
